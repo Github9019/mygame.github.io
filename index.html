@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My one game</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<main>
+
+		<div class="main_person"></div>
+		<div id="xod2" onclick="xod2();"></div>
+		<div id="xod" onclick="xod0();"></div>
+		<div id="xod1" onclick="xod1();"></div>
+		<div id="xod3" onclick="xod3();"></div>
+		<div id="xod4" onclick="xod4();"></div>
+		<div class="wall"></div>
+		<div id="Win1">
+		<div id="Win" onclick="win()"></div>
+		<div id="YesWin">
+			<h1>
+				You win!
+			</h1>
+		</div>
+	</main>
+	<script src="JS/anime.min.js"></script>
+	<script type="text/javascript">
+
+		function xod0() {
+			var anim_xod = anime({
+	 			targets: '.main_person',
+	 			top: '0px',
+	 	 		left: '1200px',
+	 	 		easing: 'easeInOutQuad',
+			});
+			var elem = document.getElementById("xod1");
+			elem.style.display = 'block';
+			elem = document.getElementById("xod2");
+			elem.style.display = 'block';
+			elem = document.getElementById("xod");
+			elem.style.display = 'none';
+			elem = document.getElementById("xod3");
+			elem.style.display = 'none';		
+		}
+		function xod1() {
+			var anim_xod1 = anime({
+			 	targets: '.main_person',
+			 	top: '500px',
+			  	easing: 'easeInOutQuad',
+			});
+			var elem = document.getElementById("xod2");
+			elem.style.display = 'none';
+			elem = document.getElementById("xod1");
+			elem.style.display = 'none';
+			elem = document.getElementById("xod");
+			elem.style.display = 'block';
+			elem = document.getElementById("xod4");
+			elem.style.display = 'none';
+			elem = document.getElementById("xod3");
+			elem.style.display = 'none';
+			elem = document.getElementById("Win");
+			elem.style.display = 'block';	
+		}
+		function xod2() {
+			var anim_xod1 = anime({
+			 	targets: '.main_person',
+			 	top: '0',
+			 	left: '0',
+			  	easing: 'easeInOutQuad',
+			});
+			elem = document.getElementById("xod2");
+			elem.style.display = 'none';
+			elem = document.getElementById("xod");
+			elem.style.display = 'block';
+			elem = document.getElementById("xod1");
+			elem.style.display = 'none';	
+			elem = document.getElementById("xod3");
+			elem.style.display = 'block';
+
+		}
+		function xod3() {
+			var anim_xod1 = anime({
+			 	targets: '.main_person',
+			 	top: '200px',
+			 	left: '0',
+			  	easing: 'easeInOutQuad',
+			});	
+			var elem = document.getElementById("xod");
+			elem.style.display = 'none';
+			elem = document.getElementById("xod3");
+			elem.style.display = 'none';
+			elem = document.getElementById("xod4");
+			elem.style.display = 'block';
+			elem = document.getElementById("xod1");
+			elem.style.display = 'none';
+		}
+		function xod4() {
+			var anim_xod1 = anime({
+			 	targets: '.main_person',
+			 	top: '200px',
+			 	left: '1200px',
+			  	easing: 'easeInOutQuad',
+			});	
+			var elem = document.getElementById("xod");
+			elem.style.display = 'block';
+			elem = document.getElementById("xod3");
+			elem.style.display = 'block';
+			elem = document.getElementById("xod4");
+			elem.style.display = 'block';
+			elem = document.getElementById("xod1");
+			elem.style.display = 'block';
+			elem = document.getElementById("xod4");
+			elem.style.display = 'none';
+		}
+		function win(){
+			var anim_xod1 = anime({
+			 	targets: '.main_person',
+			 	top: '500px',
+			 	left: '0',
+			  	easing: 'easeInOutQuad',
+			});	
+			var elem = document.getElementById("xod");
+			elem.style.display = 'none';
+			elem = document.getElementById("YesWin");
+			elem.style.display = 'block';
+		}	
+	</script>
+</body>
+</html>
